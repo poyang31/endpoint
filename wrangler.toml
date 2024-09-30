@@ -13,4 +13,4 @@ ENDPOINT_TUNNEL_SECRET="tunnel_secret_here"
 
 [[kv_namespaces]]
 binding = "KV"
-id = "kv_id_here"
+id = "fd8b52e576d444ac95bbfa55f6ec2d50"
