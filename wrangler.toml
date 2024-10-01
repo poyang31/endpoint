@@ -8,9 +8,6 @@ compatibility_flags = ["nodejs_compat"]
 [observability]
 enabled = true
 
-[vars]
-ENDPOINT_TUNNEL_SECRET="tunnel_secret_here"
-
 [[kv_namespaces]]
 binding = "KV"
 id = "fd8b52e576d444ac95bbfa55f6ec2d50"

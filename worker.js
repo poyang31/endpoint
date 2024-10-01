@@ -45,9 +45,6 @@ export default {
         // Process Request
         const res = await fetch(proxyUrl, req);
 
-        // Modify Response
-        res.headers.set("x-endpoint-url", endpointUrl);
-
         // Return Response
         return res;
     },
