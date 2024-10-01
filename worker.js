@@ -13,8 +13,8 @@ export default {
         const dstUrl = req.headers.get("x-endpoint-url");
         if (dstUrl) {
             if (secret !== env.ENDPOINT_TUNNEL_SECRET) {
-                return new Response("Endpoint: Bad Gateway", {
-                    status: 502,
+                return new Response("Endpoint: Unauthorized", {
+                    status: 401,
                 });
             }
             await env.KV.put("ENDPOINT_TUNNEL_URL", dstUrl);
