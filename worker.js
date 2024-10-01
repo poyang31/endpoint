@@ -40,12 +40,16 @@ export default {
         proxyUrl.port = proxyDst.port;
 
         // Modify Request
-        req.headers.set("host", proxyDst.host);
+        const proxyReq = new Request(proxyUrl, req);
 
         // Process Request
-        const res = await fetch(proxyUrl, req);
+        const res = await fetch(proxyReq);
+
+        // Modify Response
+        const proxyRes = new Response(res.body, res);
+        proxyRes.headers.set("x-endpoint-url", endpointUrl);
 
         // Return Response
-        return res;
+        return proxyRes;
     },
 };

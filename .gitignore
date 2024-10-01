@@ -6,6 +6,7 @@
 
 # Directories
 .nyc_output
+.wrangler
 coverage
 node_modules
 ssl_keys
